@@ -1,0 +1,40 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" 
+        href="{% static 'index.css' %}">
+        <script type="text/javascript" src="django.js"></script>
+</head>
+<body>
+    <h1>serach drop down</h1>
+    <h2 id = "demo"></h2>
+    <form method="POST" action="get_test">
+        {% csrf_token %}
+        <!--<input type="text" name="fruit" placeholder="pick fruit">-->
+        <input list="product" name="fruit">
+            <datalist id="product" >      
+                {% for item in pathtest%}
+                    <option>{{item.product}}</option>         
+                {% endfor %} 
+            </datalist>
+        
+        <button type="submit">Upload text</button>
+        </form>
+
+   <!-- <button name="test" onclick="myFunction()">try it</button>-->
+
+    <section>
+        
+        {% for i,item in dataframe.iterrows %}
+        {{item.product}} <br/>
+        <img src="{{item.path}}" alt=""> <br/>
+        {% endfor %}
+    </section>
+
+    
+</body>
+
+</html>

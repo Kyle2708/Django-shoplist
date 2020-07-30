@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" 
+        href="{% static 'get_list.css' %}">
+</head>
+<body>
+    <div>
+    <h1 id="demo"> Items</h1>
+    </div>
+    <section class = "images">
+        
+        {% for i,item in dataframe.iterrows %}
+        <img src="{{item.image_link}}" alt=""> <br/>
+        {{item.title}} <br/>
+        
+        {% endfor %}
+    </section>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("custid").value;
+      document.getElementById("demo").innerHTML = "Welcome " + x;
+    }
+</script>
+</html>

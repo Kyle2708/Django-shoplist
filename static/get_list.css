@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+img {
+    /*position: relative;
+    right: -320px;*/
+    height: 70px;
+    width: 70px;
+    border-radius: 20%;
+  }
+  img:hover
+  {
+    border-radius: 50%;
+    
+    opacity: 0.8;
+    background-image: none;
+  }
+  h1{
+      text-align: center;
+      background-color: rgb(136, 136, 136);
+      background-image:
+    linear-gradient(
+      to right, 
+      rgb(255, 255, 255), rgb(1, 112, 38)
+    );
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 400px;
+  }
+  .images
+  {
+    text-decoration: lightgreen;
+    text-align: right;
+      font-size: 20px;
+    background-color:  rgb(1, 112, 38);
+    background-image:
+    linear-gradient(
+      to right, 
+      rgb(255, 255, 255), rgb(1, 112, 38)
+    );
+    position: relative;
+    
+    top: -25px;
+      width: 400px;
+      height: 900px;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-right: 10px;
+  }

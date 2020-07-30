@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" 
+        href="{% static 'login.css' %}">
+        
+</head>
+    <body>      
+        <section>
+            <br/>
+            <h1>Sign IN</h1>     
+                <!-- Messages -->
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}     
+                <form method="POST" action="{'get_list'}">
+                    {% csrf_token %}            
+                        <input type = "number" list="Customer_ID" name = "custid" id = "custid" placeholder="Customer ID" required/>
+                            <datalist id = "Customer_ID">
+                                {% for item in customer%}
+                                <option>{{item.Customer_ID}}</option>
+                                {% endfor %}
+                            </datalist>
+                            <button type="submit" id="login">Log In</button>                    
+                </form> 
+        </section>  
+    </body>
+    
+</html>
+
+    
+
